@@ -13,6 +13,11 @@ function writePassword() {
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
+let upperCaseOptions = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+let lowerCaseOptions = "abcdefghijklmnopqrstuvwxyz";
+let number = "0123456789";
+let symbol = "!@#$%^&*()_+";
+
 function generatePassword() {
   let passwordLegnth = prompt(
     "choose a length of at least 8 characters and no more than 128 characters"
@@ -22,20 +27,13 @@ function generatePassword() {
   if (passwordLegnth < 8 || passwordLegnth > 128) {
     alert("Sorry it needs to follow the password requirements");
   } else {
-    let upperCase = confirm("Is your password going to contain a uppercase?");
-    let lowerCase = confirm("Is your password going to contain a lowerase?");
-    let number = confirm("Is your password going to contain a number?");
-    let symbol = confirm("Is your password going to contain a symbol?");
+    let isPpperCase = confirm("Is your password going to contain a uppercase?");
+    let isLowerCase = confirm("Is your password going to contain a lowerase?");
+    let isNumber = confirm("Is your password going to contain a number?");
+    let isSymbol = confirm("Is your password going to contain a symbol?");
 
-    if (upperCase || lowerCase || number || symbol) {
-      var randomstring = Math.random().toString().slice(-8);
     }
-    // let randomstring = {
-    //   upperCase = ABCDEFGHIJKLMNOPQRSTUVWXYZ;
-    //   lowerCase = abcdefghijklmnopqrstuvwxyz;
-    //   number = 0123456789;
-    //   symbol = !@#$%^&*()_+;
-    // }
+    
   }
 
   var newPassword = Math.random().toString().slice(-8);
