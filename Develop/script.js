@@ -88,19 +88,31 @@ function generatePassword() {
     guarenteeCharacter.push(randomizer(upperCaseOptions));
   }
   //samething for rest of variables
-  if (options.upperCase) {
-    possibleSelection = possibleSelection.concat(upperCaseOptions);
-    guarenteeCharacter.push(randomizer(upperCaseOptions));
+  if (options.lowerCase) {
+    possibleSelection = possibleSelection.concat(lowerCaseOptions);
+    guarenteeCharacter.push(randomizer(lowerCaseOptions));
   }
 
-  if (options.upperCase) {
-    possibleSelection = possibleSelection.concat(upperCaseOptions);
-    guarenteeCharacter.push(randomizer(upperCaseOptions));
+  if (options.isNumber) {
+    possibleSelection = possibleSelection.concat(numberOptions);
+    guarenteeCharacter.push(randomizer(numberOptions));
   }
 
-  if (options.upperCase) {
-    possibleSelection = possibleSelection.concat(upperCaseOptions);
-    guarenteeCharacter.push(randomizer(upperCaseOptions));
+  if (options.isSymbol) {
+    possibleSelection = possibleSelection.concat(symbolOptions);
+    guarenteeCharacter.push(randomizer(symbolOptions));
+  }
+
+  // for (let i = 0; i < passwordlength; i++) {
+  //   getPasswordOptions += passwordOptions.charArt(
+  //     Math.floor(Math.random() * passwordLength)
+  //   );
+  // }
+
+
+  for (let i = 0; i < (push(randomizer(passwordLength) i++) {
+    let possibleSelection = (Math.floor(Math.random() * length)
+    )
   }
 
   //loop over lengthoptions we created.
