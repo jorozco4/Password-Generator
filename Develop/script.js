@@ -93,12 +93,12 @@ function generatePassword() {
     guarenteeCharacter.push(randomizer(lowerCaseOptions));
   }
 
-  if (options.isNumber) {
+  if (options.number) {
     possibleSelection = possibleSelection.concat(numberOptions);
     guarenteeCharacter.push(randomizer(numberOptions));
   }
 
-  if (options.isSymbol) {
+  if (options.symbol) {
     possibleSelection = possibleSelection.concat(symbolOptions);
     guarenteeCharacter.push(randomizer(symbolOptions));
   }
@@ -109,11 +109,39 @@ function generatePassword() {
   //   );
   // }
 
+  // for (let i = 0; i < (push(randomizer(passwordLength) ;i++) {
+  //   let possibleSelection = (Math.floor(Math.random() * length)
+  //   )
+  // }
 
-  for (let i = 0; i < (push(randomizer(passwordLength) i++) {
-    let possibleSelection = (Math.floor(Math.random() * length)
-    )
+  // for (let i = 0; i < push(randomizer(passwordLength)); i++) {
+  //   let possibleSelection = Math.floor(Math.random() * length);
+  // }
+
+  // for(let i = 0; i < passwordLength; i++){
+  //   let temp = [];
+
+  // }
+
+  console.log(guarenteeCharacter);
+  console.log(possibleSelection);
+
+  console.log(options);
+  console.log(options.length);
+
+  let finalPasswordArray = [];
+
+  for (let i = 0; i < options.length; i++) {
+    tempPassword.push(randomizer(possibleSelection));
   }
+
+  for (let x = 0; x < tempPassword.length; x++) {
+    finalPasswordArray.push(randomizer([x]));
+  }
+
+  console.log(tempPassword);
+
+  console.log(finalPasswordArray);
 
   //loop over lengthoptions we created.
   //create temp array inside of the loop
