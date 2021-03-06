@@ -130,18 +130,18 @@ function generatePassword() {
   console.log(options.length);
 
   let finalPasswordArray = [];
+  let finalGeneratedPassword = "";
 
   for (let i = 0; i < options.length; i++) {
-    tempPassword.push(randomizer(possibleSelection));
+    tempPassword.push([randomizer(randomizer(possibleSelection))]);
   }
 
-  for (let x = 0; x < tempPassword.length; x++) {
-    finalPasswordArray.push(randomizer([x]));
-  }
+  var merged = [].concat.apply([], tempPassword);
+  finalGeneratedPassword = merged.join("");
+  console.log(finalGeneratedPassword);
+  console.log(merged.join(""));
 
-  console.log(tempPassword);
-
-  console.log(finalPasswordArray);
+  return finalGeneratedPassword;
 
   //loop over lengthoptions we created.
   //create temp array inside of the loop
