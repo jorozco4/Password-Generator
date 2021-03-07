@@ -13,6 +13,7 @@ function writePassword() {
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
+//Declaring variables
 let upperCaseOptions = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 upperCaseOptions.split(", ");
 console.log(upperCaseOptions);
@@ -34,7 +35,7 @@ function getPasswordOptions() {
     return;
   }
 
-  // else { remove later
+  // This option will alert the user the message depicted in the quotations
   let isUpperCase = confirm("Is your password going to contain a uppercase?");
   let isLowerCase = confirm("Is your password going to contain a lowerase?");
   let isNumber = confirm("Is your password going to contain a number?");
@@ -51,31 +52,16 @@ function getPasswordOptions() {
   console.log(passwordOptions);
 
   return passwordOptions;
-
-  // let newPassword = "";
-  // let selectedOptions = upperCaseOptions + symbolOptions;
-
-  // for (let i = 0; i < passwordLegnth; i++) {
-  //   newPassword += selectedOptions.charAt(
-  //     Math.floor(Math.random() * passwordLength)
-  //   );
-  // }
-
-  // if (upperCaseOptions === true) {
-  //   isNumbers = isSymbol.getNumbers(0);
-  //   isNumber++;
-  // }
-
-  // return newPassword;
 }
 
+//This option randomizes element characters
 function randomizer(arr) {
   let randomIndex = Math.floor(Math.random() * arr.length);
   let randomElement = arr[randomIndex];
   return randomElement;
 }
 
-/// Your choice of variables
+/// This option is my choice of variables
 
 function generatePassword() {
   let options = getPasswordOptions();
@@ -83,11 +69,12 @@ function generatePassword() {
   let possibleSelection = [];
   let guarenteeCharacter = [];
 
+  //This options selects possible variable selections
   if (options.upperCase) {
     possibleSelection = possibleSelection.concat(upperCaseOptions);
     guarenteeCharacter.push(randomizer(upperCaseOptions));
   }
-  //samething for rest of variables
+
   if (options.lowerCase) {
     possibleSelection = possibleSelection.concat(lowerCaseOptions);
     guarenteeCharacter.push(randomizer(lowerCaseOptions));
@@ -103,51 +90,19 @@ function generatePassword() {
     guarenteeCharacter.push(randomizer(symbolOptions));
   }
 
-  // for (let i = 0; i < passwordlength; i++) {
-  //   getPasswordOptions += passwordOptions.charArt(
-  //     Math.floor(Math.random() * passwordLength)
-  //   );
-  // }
-
-  // for (let i = 0; i < (push(randomizer(passwordLength) ;i++) {
-  //   let possibleSelection = (Math.floor(Math.random() * length)
-  //   )
-  // }
-
-  // for (let i = 0; i < push(randomizer(passwordLength)); i++) {
-  //   let possibleSelection = Math.floor(Math.random() * length);
-  // }
-
-  // for(let i = 0; i < passwordLength; i++){
-  //   let temp = [];
-
-  // }
-
-  console.log(guarenteeCharacter);
-  console.log(possibleSelection);
-
-  console.log(options);
-  console.log(options.length);
-
   let finalPasswordArray = [];
   let finalGeneratedPassword = "";
 
+  // This option pushes arrays of possible characters into the temp password
   for (let i = 0; i < options.length; i++) {
     tempPassword.push([randomizer(randomizer(possibleSelection))]);
   }
 
+  // This option merges arrays to spit out the objects
   var merged = [].concat.apply([], tempPassword);
   finalGeneratedPassword = merged.join("");
   console.log(finalGeneratedPassword);
   console.log(merged.join(""));
 
   return finalGeneratedPassword;
-
-  //loop over lengthoptions we created.
-  //create temp array inside of the loop
-  //push arrary of possible characters into our temp password
-  //concat charaters inside of our temp password array
-  //create another loop thats users our gaurantee matches temp password with brackets I
-
-  //return temp password. Convert arr to a string FIND METHOD!!
 }
