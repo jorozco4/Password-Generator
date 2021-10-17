@@ -4,7 +4,7 @@ For this assignement our goal was to create a password generator. When the passw
 
 # Live Link
 
-https://jorozco4.github.io/Homework-3/
+https://jorozco4.github.io/Password-Generator/
 
 # Technologies Used
 
